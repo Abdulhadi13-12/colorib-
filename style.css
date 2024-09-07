@@ -1,0 +1,66 @@
+.hero {
+    background: url('your-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.features p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Hover Effect on Navbar Links */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Hero Button Hover Effect */
+.hero .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Feature Box Hover Effect */
+.features .col-lg-4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .col-lg-4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation for Features Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.features .col-lg-4 {
+    animation: fadeIn 0.8s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+/* Trigger Animation on Scroll */
+.window-loaded .features .col-lg-4 {
+    opacity: 1;
+}
